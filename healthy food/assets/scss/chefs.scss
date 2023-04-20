@@ -1,0 +1,90 @@
+@import "./variables.scss";
+
+.chefs{
+    background-color: $black;
+}
+.chef-main{
+    padding-top: 90px;
+    position: relative;
+    &>h1{
+        text-align: center;
+        font-size: 100px;
+        line-height: 150px;
+        letter-spacing: 0.2em;
+        font-weight: 900;
+        color: #303030;
+        @media(max-width:400px){
+            font-size: 70px;
+            line-height: 100px;
+        }
+    }
+    &>h2{
+        font-size: 36px;
+        line-height: 44px;
+        width: 100%;
+        text-align: center;
+        letter-spacing: 0.1em;
+        color: #D9D9D9;
+        position: absolute;
+        top: 140px;
+        @media(max-width:400px){
+            top: 120px;
+            letter-spacing: 0;
+        }
+    }
+}
+.chef-cards{
+    margin-top: 65px;
+    display: flex;
+    gap: 30px;
+    @media(max-width:1200px){
+        // flex-direction: column;
+        // align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 70px;
+        row-gap: 40px;
+    }
+}
+.chef-card{
+    .about{
+        display: flex;
+        align-items: center;
+        gap: 24px;
+        img{
+            width: 65px;
+        }
+        .img-desc{
+            h4{
+                font-size: 18px;
+                line-height: 24px;
+                color: #fff;
+            }
+            p{
+                font-size: 12px;
+                line-height: 16px;
+                color: rgba($color: #fff, $alpha: 0.5);
+            }
+        }
+    }
+    .chef-foods{
+        display: flex;
+        gap: 30px;
+        margin-top: 24px;
+        @media(max-width:400px){
+            gap: 12px;
+        }
+        img{
+            width: 65px;
+            @media(max-width:400px){
+                width: 50px;
+            }
+        }
+        .big{
+            width: 160px;
+            @media(max-width:400px){
+                width: 130px;
+            }
+        }
+    }
+}

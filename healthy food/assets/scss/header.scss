@@ -1,0 +1,78 @@
+@import "./variables.scss";
+
+header{
+    background-color:rgb(26, 26, 26);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+nav{
+    height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .logo{
+        a{
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            img{
+                width: 25px;
+            }
+            h1{
+                font-size: 13px;
+                font-weight: 500;
+                color: $green;
+                letter-spacing: 2px;
+            }
+        }
+    }
+    label{
+        color: #fff;
+        font-size: 22px;
+        display: none;
+        @media(max-width:650px){
+            display: block;
+        }
+    }
+    #check{
+        display: none;
+        &:checked ~ ul{
+            transform: translateX(0);
+        }
+    }
+    ul{
+        display: flex;
+        gap: 45px;
+        @media(max-width:650px){
+            position: fixed;
+            top: 90px;
+            left: 0;
+            width: 60%;
+            height: calc(100vh - 90px);
+            background-color: $light-grey;
+            flex-direction: column;
+            gap: 20px;
+            justify-content: center;
+            align-items: center;
+            transition: all 0.4s ease-in-out;
+            transform: translateX(-100%);
+        }
+        @media(max-width:450px){
+            width: 100%;
+        }
+        li{
+            font-size: 14px;
+            line-height: 90px;
+            font-weight: 700;
+            color: #fff;
+            letter-spacing: 2px;
+            &:hover{
+                color: $green;
+            }
+            @media(max-width:650px){
+                line-height: 20px;
+            }
+        }
+    }
+}

@@ -1,0 +1,39 @@
+@import "./variables.scss";
+
+.contact{
+    background-color: $black;
+}
+
+.contact-cards{
+    padding: 90px 0;
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+    @media(max-width:880px){
+        gap: 30px;
+    }
+    @media(max-width:670px){
+        flex-direction: column;
+        row-gap: 50px;
+    }
+    .contact-card{
+        text-align: center;
+        i{
+            font-size: 25px;
+            color: #fff;
+            opacity: 0.5;
+        }
+        h4{
+            font-size: 16px;
+            line-height: 30px;
+            color: #fff;
+            margin-top: 13px;
+        }
+        p{
+            font-size: 14px;
+            line-height: 24px;
+            color: #fff;
+            opacity: 0.5;
+        }
+    }
+}

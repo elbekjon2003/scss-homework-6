@@ -1,0 +1,101 @@
+@import "./variables.scss";
+
+.dishes{
+    background-color: $black;
+}
+.dishes-main{
+    padding-top: 90px;
+    position: relative;
+    h1{
+        text-align: center;
+        font-size: 100px;
+        line-height: 150px;
+        font-weight: 900;
+        color: #303030;
+        letter-spacing: 0.2em;
+        @media(max-width:550px){
+            font-size: 70px;
+            line-height: 100px;
+        }
+        @media(max-width:380px){
+            font-size: 60px;
+            line-height: 100px;
+        }
+    }
+    &>h2{
+        position: absolute;
+        top: 135px;
+        width: 100%;
+        text-align: center;
+        font-size: 36px;
+        line-height: 50px;
+        color: #D9D9D9;
+        letter-spacing: 0.2em;
+        @media(max-width:550px){
+            top: 115px;
+        }
+    }
+    .dish-cards{
+        margin-top: 90px;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 30px;
+        .dish-card{
+            width: 350px;
+            background-color: #252525;
+            border-radius: 6px;
+            .desc-part{
+                padding: 30px;
+                @media(max-width:380px){
+                    padding: 16px;
+                }
+                h2{
+                    font-size: 32px;
+                    color: #D9D9D9;
+                }
+                p{
+                    font-size: 12px;
+                    line-height: 16px;
+                    color: #A4A8B2;
+                    margin-bottom: 20px;
+                }
+                .rank{
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    .stars{
+                        display: flex;
+                        align-items: center;
+                        gap: 6px;
+                        @media(max-width:380px){
+                            gap: 2px;
+                        }
+                        i{
+                            color: $gold;
+                        }
+                        p{
+                            font-size: 14px;
+                            margin-top: 18px;
+                        }
+                    }
+                    button{
+                        padding: 14px 32px;
+                        border: 2px solid #303030;
+                        border-radius: 30px;
+                        background-color: transparent;
+                        color: #fff;
+                        opacity: 0.5;
+                        &:hover{
+                            background-color: $green;
+                            color: #252525;
+                        }
+                        @media(max-width:380px){
+                            padding: 12px 20px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
